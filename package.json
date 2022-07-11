@@ -1,10 +1,13 @@
 {
   "name": "v-i18n",
   "version": "0.0.0",
+  "private": true,
   "description": "Internationalization plugin for Vue.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "husky install",
+    "commit": "cz"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,29 @@
   "bugs": {
     "url": "https://github.com/niechao136/v-i18n/issues"
   },
-  "homepage": "https://github.com/niechao136/v-i18n#readme"
+  "homepage": "https://github.com/niechao136/v-i18n#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.19.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "typescript": "^4.7.4",
+    "vite": "^2.9.14"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
 }
