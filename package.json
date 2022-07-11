@@ -1,0 +1,19 @@
+{
+  "name": "v-i18n",
+  "version": "0.0.0",
+  "description": "Internationalization plugin for Vue.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niechao136/v-i18n.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niechao136/v-i18n/issues"
+  },
+  "homepage": "https://github.com/niechao136/v-i18n#readme"
+}
